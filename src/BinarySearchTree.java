@@ -9,6 +9,10 @@ public class BinarySearchTree {
         return size;
     }
 
+    public boolean isEmpty() {
+        return this.size == 0;
+    }
+
     public void add(int value) {
         if (this.root == null) {
             this.root = new Node(value);

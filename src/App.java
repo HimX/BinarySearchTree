@@ -63,7 +63,7 @@ public class App {
         System.out.println("+ " + App.INSERT_COMMAND + " - Insertar nuevo nodo");
         System.out.println("+ " + App.REMOVE_COMAND + " - Eliminar nodo");
         System.out.println("+ " + App.PRE_ORDER_COMMAND + " - pre orden");
-        System.out.println("+ " + App.IN_ORDER_COMMAND+ " - in orden");
+        System.out.println("+ " + App.IN_ORDER_COMMAND + " - in orden");
         System.out.println("+ " + App.POST_ORDER_COMMAND + " - post orden");
         System.out.println("+ " + App.EXIT_COMMAND + " - Salir de BSTress.");
         System.out.println("+ " + App.HELP_COMMAND + " - Ver la lista de comandos.");
@@ -74,7 +74,7 @@ public class App {
         System.out.println("           BSTree, nodos.            ");
         System.out.println("=====================================");
 
-        if (tree.getSize() == 0) {
+        if (tree.isEmpty()) {
             System.out.println("El árbol se encuentra vacío.");
             return;
         }
@@ -97,6 +97,11 @@ public class App {
     }
 
     public static void remove(BinarySearchTree tree, Scanner scanner) {
+        if (tree.isEmpty()) {
+            System.out.println("El árbol se encuentra vacío.");
+            return;
+        }
+
         System.out.print("Número del nodo: ");
 
         int value = scanner.nextInt();
@@ -115,7 +120,7 @@ public class App {
     }
 
     public static void inOrder(BinarySearchTree tree) {
-        if (tree.getSize() == 0) {
+        if (tree.isEmpty()) {
             System.out.println("El árbol se encuentra vacío.");
             return;
         }
@@ -123,7 +128,7 @@ public class App {
     }
 
     public static void preOrder(BinarySearchTree tree) {
-        if (tree.getSize() == 0) {
+        if (tree.isEmpty()) {
             System.out.println("El árbol se encuentra vacío.");
             return;
         }
@@ -131,7 +136,7 @@ public class App {
     }
 
     public static void postOrder(BinarySearchTree tree) {
-        if (tree.getSize() == 0) {
+        if (tree.isEmpty()) {
             System.out.println("El árbol se encuentra vacío.");
             return;
         }
